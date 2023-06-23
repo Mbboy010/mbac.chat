@@ -12,6 +12,7 @@
 }
 body {
     display: flex;
+    font-family: normal;
     justify-content: center ;
     align-items: center;
     min-height: 100vh;
@@ -98,8 +99,8 @@ box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1)
 
 .containers {
   position: relative;
-  top: 5%;
-  left: 7%;
+  top: 9%;
+  left: 17%;
   margin: 1%;
   padding: 80px 50px 50px;
   width: 250px;
