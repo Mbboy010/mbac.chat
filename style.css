@@ -1,0 +1,293 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+:root{
+  --background-body: #edf1f4;
+  --text-color: black;
+}
+.dark-theme{
+    --background-body: black;
+    --text-color: white;
+}
+body {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--background-body);
+    margin: 0px;
+}
+.container{
+  position: relative ;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  background: var(--background-body);
+  box-shadow: 1px 1px 10px;
+  overflow: hidden;
+}
+.tabs .pot{
+  visibility: hidden;
+  display: none ;
+}
+.buttons{
+position: relative;
+display: flex;
+background: none;
+background-attachment: fixed;
+background-repeat: no-repeat;
+box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1)
+
+} 
+.buttons .la{
+  width: 33.33%;
+  background-attachment: fixed ;
+  text-align: center;
+  color: var(--text-color);
+  font-weight: 300;
+  font-size: 1.2em;
+  padding: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tabs .pot:nth-child(1):checked ~ .buttons .la:nth-child(1),.tabs .pot:nth-child(2):checked ~ .buttons .la:nth-child(2),.tabs .pot:nth-child(3):checked ~ .buttons .la:nth-child(3){
+  font-weight: 600;
+  color: dodgerblue ;
+}
+.underline {
+  position: absolute ;
+  left: 0;
+  bottom: 0;
+  width: 33.33%;
+  height: 6%;
+  background: dodgerblue;
+  transition: 0.3s;
+}
+.tabs .pot:nth-child(1):checked ~ .buttons .underline {
+  left: 0%;
+}
+.tabs .pot:nth-child(2):checked~.buttons .underline {
+  left: 33.33%;
+}
+.tabs .pot:nth-child(3):checked~.buttons .underline {
+  left: 66.66%;
+}
+.content {
+  position: relative ;
+  width: calc(100% * 3);
+  display: flex;
+  transition: 0.3s;
+  overflow: hidden ;
+}
+.content .box{
+  position: relative ;
+  width: 100%;
+}
+.tabs .pot:nth-child(1):checked~ .content{
+  left: calc(100% * 0);
+}
+.tabs .pot:nth-child(2):checked~.content {
+  left: calc(100% * -1);
+}
+.tabs .pot:nth-child(3):checked~.content {
+  left: calc(100% * -2);
+}
+
+
+.containers {
+  position: relative;
+  top: 5%;
+  left: 7%;
+  margin: 1%;
+  padding: 80px 50px 50px;
+  width: 250px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1),
+  -4px -4px 5px white;
+  border-radius: 20px;
+  display: flex ;
+  justify-content: center ;
+  align-items: center ;
+  overflow: hidden ;
+  border: 1px solid dodgerblue;
+}
+.containers form{
+  position: relative ;
+  width: 100%;
+}
+.containers form .header{
+  position: relative ;
+}
+.containers form h2{
+  font-size: 2em;
+  margin-bottom: 30px;
+  line-height: 0.9em
+}
+.containers form h2 span{
+  font-weight: 800;
+  font-size: 0.7em;
+  color: dodgerblue;
+}
+.containers form .inputbox{
+  position: relative ;
+  display: flex ;
+}
+.containers form .inputbox input{
+  border: none;
+  outline: none ;
+  background: transparent;
+  border-radius: 10px;
+  font-size: 1em;
+}
+.containers form .inputbox input[type="text"],
+.containers form .inputbox input[type="password"]{
+  width: 100%;
+  padding: 15px 20px;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+  inset -2px -2px 5px white;
+}
+.containers form label{
+  position: relative ;
+  display: flex ;
+  align-items: center ;
+}
+.containers form input[type="checkbox"]{
+margin-right: 10px;
+}
+.containers form h4{
+  color: dodgerblue;
+}
+.containers form .inputbox input[type="submit"]{
+  background: none;
+  width: 100%;
+  padding: 15px 20px;
+  margin-top: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1),
+  -2px -2px 5px white;
+  font-weight: 600;
+}
+.containers form .inputbox input[type="submit"]:focus{
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+   inset -2px -2px 5px white;
+}
+.containers form .des{
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  width: 150px;
+  height: 200px;
+  background: dodgerblue;
+  border-radius: 70px 0px 30px 0px;
+}
+.containers form .dess {
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  width: 40px;
+  height: 40px;
+  background: dodgerblue;
+  border-radius: 100px 100px 100px 100px;
+}
+.containers form .forget{
+  position: relative;
+  display: flex ;
+  padding-top: 20px;
+}
+.containers form h3{
+  cursor: pointer ;
+}
+
+.post {
+position: relative ;
+border: 1px solid dodgerblue ;
+ width: 100%;
+ background: none;
+ box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1),
+ -2px -2px 5px white;
+margin-top: 15px;
+}
+.post .postna{
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1),
+  -2px -2px 5px white;
+  width: 100%;
+  display: flex;
+  justify-content: left ;
+  align-items: center ;
+  
+}
+.postdp{
+  display: flex ;
+  padding: 15px ;
+  margin: 20px ;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1),
+  -1px -1px 2px white;
+}
+.postt{
+  color: var(--text-color);
+  margin: 0px;
+  row-gap: none;
+}
+.askpo{
+  position: relative ;
+  width: 100%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1),
+  -2px -3px 3px none;
+  border-top: 3px solid dodgerblue;
+}
+.post .des1{
+  position: absolute ;
+  padding: 20px;
+  top: 20%;
+  left: 78%;
+  width: 50px ;
+  height: 90px ;
+  border-radius: 100px 0px 0px 0px;
+  background: dodgerblue;
+}
+.post .des2 {
+  position: absolute;
+  padding: 20px;
+  top: 13%;
+  left: 80%;
+  width: 4px;
+  height: 4px;
+  border-radius: 100px;
+  background: dodgerblue;
+}
+.plus {
+  position: absolute ;
+  left: 76%;
+  top: 50%;
+  background: dodgerblue ;
+  padding: 20px ;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 30px ;
+  font-size: 5em;
+  font-weight: 0;
+  color: white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+a{
+  text-decoration: none;
+  color: var(--text-color);
+}
+#dark{
+  position: absolute ;
+  width: 40px;
+  background: rgba(224, 224, 224, 0.7) ;
+  top: 7%;
+  left: 78%;
+  cursor: pointer;
+}
+.ub{
+  color: var(--text-color);
+}

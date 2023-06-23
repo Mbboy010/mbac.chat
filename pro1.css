@@ -1,0 +1,104 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: #edf1f4;
+  
+}
+.barner {
+  position: relative ;
+  display: flex ;
+  box-shadow: 3px 3px 3px white ,
+  -2px -3px 3px white;
+}
+.barner .barn{
+  width: 100%;
+  height: 150px;
+  border-bottom: 3px solid dodgerblue ;
+}
+.profile {
+  position: absolute ;
+  top: 10%;
+  left: 30%;
+}
+.profile .pro{
+  width: 150px;
+  height: 150px;
+  padding: 6px ;
+  background: #edf1f4 ;
+  border-radius: 100% ;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1),
+  -2px -2px 5px white;
+}
+.prona{
+  position: absolute ;
+  top: 32%;
+  left: 33%;
+  text-align: center ;
+}
+.container{
+  position: absolute ;
+  top: 40%;
+  background: #edf1f4 ;
+  width: 100% ;
+  height: 700px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1),
+  -2px -3px 3px white;
+}
+.tabs input{
+  visibility: hidden;
+  display: none ;
+}
+.menu {
+  position: relative;
+  display: flex;
+  background: #edf1f4;
+  padding: 15px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0),
+  -2px -3px 3px white;
+}
+.menu label{
+  width: 50%;
+  color: black ;
+  text-align: center ;
+  text-transform: uppercase ;
+}
+.tabs input:nth-child(1):checked ~ .menu label:nth-child(1),.tabs input:nth-child(2):checked ~ .menu label:nth-child(2)
+{
+  font-weight: 900;
+  color: dodgerblue ;
+}
+.underline {
+  position: absolute ;
+  left: 0;
+  bottom: 0;
+  background: dodgerblue ;
+  width: 50%;
+  height: 6%;
+  transition: 0.50s ;
+}
+.tabs input:nth-child(1):checked ~ .menu .underline{
+  left: 0%;
+}
+.tabs input:nth-child(2):checked~.menu .underline {
+  left: 50%;
+}
+.content {
+  position: relative ;
+  width: calc(100% * 2);
+  display: flex;
+  transition: 9s;
+  overflow: hidden ;
+}
+.content .box{
+  position: relative ;
+  width: 100%;
+}
+.tabs .pot:nth-child(1):checked~ .content{
+  left: calc(100% * 0);
+}
+ .tabs input:nth-child(2):checked~.content {
+   left: calc(100% * -1);
+   
+ }
